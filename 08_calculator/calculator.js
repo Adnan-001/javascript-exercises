@@ -12,8 +12,12 @@ const sum = function(arr) {
 };
 
 const multiply = function(arr) {
+  if (!arr.length()) {
+    return 0;
+  }
   return arr.reduce((product, num) => product*num, 1);
 };
+
 
 const power = function(num, power) {
     return num**power;
@@ -24,6 +28,11 @@ const factorial = function(num) {
     return 1;
   }
   
+  let ans=1;
+  for (let i = num; i >0; i--) {
+    ans *= i;    
+  }
+  return ans;
 
 };
 
